@@ -13,14 +13,14 @@
     />
     <link href="https://fonts.googleapis.com/css?family=Asar|Roboto:400,400i,700,700i" rel="stylesheet">
 
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="global.js"></script>
 
 </head>
 
 <body>
 
-    <div class="stage">
+    <div class="stage" id="stage">
 
         <div class="menu">
 
@@ -32,7 +32,10 @@
                     <div class="menu_field"></div>
                     <div class="menu_title">O Patinho Feio</div>
                 </div>
-                <div class="menu_bt menu_bt--right"><i class="fa fa-search" aria-hidden="true"></i></div>
+                <div class="menu_bt menu_bt--right">
+                    <span class="icon-mode--moon"><i class="fa fa-moon-o" aria-hidden="true" onclick="sunMode()"></i></span>
+                    <span class="icon-mode--sun"><i class="fa fa-sun-o" aria-hidden="true" onclick="sunMode()"></i></span>
+                </div>
             </div>
 
 
@@ -46,7 +49,7 @@
 
 
         <div class="page">
-            <h1 class="page__titulo cor21">
+            <h1 class="page__titulo corok0">
                   O Patinho Feio
               </h1>
             <div class="page__text">
