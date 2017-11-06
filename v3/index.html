@@ -43,14 +43,14 @@
     <body id="bod">
        <div id="top">
            <h1>Hora da História</h1>
-           <span onclick="geraLista()" id="voltar-lista">&#8617; Voltar pra lista</span>
+           <span onclick="geraLista()" ontouchstart="geraLista()" id="voltar-lista">&#8617; Voltar pra lista</span>
        </div>
        <div id="disclaimer">
            <p>Bem vindo(a) ao Hora da História. Reuno aqui algumas histórias infantis para serem lidas pelos pais e mães na hora de deitar seus filhos. Bem como para que as crianças que estão aprendendo possam também ler antes de deitar. O objetivo é apresentar as histórias para serem lidas na tela do celular ou do tablet, sem distrações. A estrutura do texto e o design dos detalhes, como fonte e espaçamentos, foi pensado para dar o melhor conforto à leitura.</p>
           
           <p>Este é um trabalho em constante andamento. Novas histórias continuarão sendo adicionadas. Erros sendo corrigidos. Caso você tenha uma história original que queira adicionar aqui, sinta-se a vontade para entrar em contato. Este é um projeto de código aberto, disponível no GitHub.</p>
           
-          <p onclick="geraLista()">Toque para começar</p>
+          <p onclick="geraLista()" ontouchstart="geraLista()">Toque para começar</p>
           
           <p>Projeto no GitHub: xxx</p>
           <p>Contato: xxx</p>
@@ -63,7 +63,7 @@
           
            
        </div>
-       <div id="bot" onclick="voltarTopo()">Voltar pro topo</div>
+       <div id="bot" onclick="voltarTopo()" ontouchstart="voltarTopo()">Voltar pro topo</div>
        
        
         <script>
@@ -108,7 +108,7 @@ function geraLista(){
     
     
     var template = `
-        <span onclick="geraTexto(XXXIDXXX)">
+        <span onclick="geraTexto(XXXIDXXX)" ontouchstart="geraTexto(XXXIDXXX)">
             <span class="list-title">XXXTITULOXXX</span>
             <span class="list-time">XXXTIMEXXX min.</span>
         </span>
@@ -133,6 +133,7 @@ function geraLista(){
         
         //Historias
         result += template.replace("XXXIDXXX",i)
+                  .replace("XXXIDXXX",i)
                   .replace("XXXTITULOXXX",historiaAtual["Titulo"])
                   .replace("XXXTIMEXXX",historiaAtual["Duracao"])
         
